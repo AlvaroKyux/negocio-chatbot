@@ -1,0 +1,85 @@
+/* Estilos generales para centrar el contenido */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1e3a8a; /* Azul oscuro */
+    padding: 20px;
+}
+
+/* Tarjeta del formulario */
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Título */
+.login-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+/* Campos de entrada */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #f1f5f9;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.input-group:focus-within {
+    border: 2px solid #2563eb; /* Azul más claro */
+    background: white;
+}
+
+/* Íconos */
+.input-icon {
+    color: #64748b;
+    margin-right: 10px;
+}
+
+/* Input */
+.input-field {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Botón */
+.login-button {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.login-button:hover {
+    background: #1e40af;
+}
+
+/* Mensaje de error */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
