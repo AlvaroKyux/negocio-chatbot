@@ -41,6 +41,7 @@ const Login = () => {
       console.log("✅ Inicio de sesión exitoso. Token recibido:", data.token);
       // Guardar el token en localStorage
       localStorage.setItem("token", data.token);
+      localStorage.setItem("role", data.role); // 👈 IMPORTANTE
 
       // Redirigir según el rol
       if (data.role === "admin") {
@@ -88,7 +89,9 @@ const Login = () => {
             />
           </div>
 
-          <button type="submit" className="login-button">Iniciar Sesión</button>
+          <button type="submit" className="login-button">
+            Iniciar Sesión
+          </button>
         </form>
       </div>
     </div>

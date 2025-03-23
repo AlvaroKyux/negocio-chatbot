@@ -1,73 +1,94 @@
-/* Fondo azul moderno */
+/* Fondo azul moderno con efecto gradiente */
 .dashboard-container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    padding: 20px;
-  }
-  
-  /* Tarjeta central */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tarjeta central blanca con sombra */
+.dashboard-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+}
+
+/* Título */
+.dashboard-card h1 {
+  font-size: 26px;
+  color: #1e3c72;
+  margin-bottom: 30px;
+}
+
+/* Botones (admin) en grid vertical */
+.button-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Botones (empleado) en grupo horizontal */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Sección empleados */
+.employee-section h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Botones modernos */
+.dashboard-button {
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Colores personalizados */
+.blue {
+  background: #3498db;
+}
+
+.green {
+  background: #2ecc71;
+}
+
+.yellow {
+  background: #f1c40f;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
   .dashboard-card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
+    padding: 30px 20px;
   }
-  
-  /* Título */
-  .dashboard-card h1 {
-    font-size: 24px;
-    color: #1e3c72;
-    margin-bottom: 20px;
-  }
-  
-  /* Grid de botones */
-  .button-grid {
-    display: grid;
-    gap: 15px;
-  }
-  
-  /* Sección para empleados */
-  .employee-section h2 {
-    color: #1e3c72;
-  }
-  
-  .employee-section p {
-    color: #555;
-    margin-bottom: 15px;
-  }
-  
-  /* Grupo de botones */
-  .button-group {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  /* Botones */
+
   .dashboard-button {
-    padding: 12px;
     width: 100%;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
-  
-  .dashboard-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+
+  .button-group {
+    flex-direction: column;
   }
-  
-  /* Colores de botones */
-  .blue { background: #007bff; }
-  .green { background: #28a745; }
-  .yellow { background: #ffc107; }
-  
+}

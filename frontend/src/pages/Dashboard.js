@@ -20,28 +20,42 @@ const Dashboard = () => {
       <Navbar />
       <div className="dashboard-card">
         <h1>Panel de Control</h1>
-        
+
         {role === "admin" ? (
           <div className="button-grid">
-            <button onClick={() => navigate("/users")} className="dashboard-button blue">
+            <button
+              onClick={() => navigate("/usuarios")}
+              className="dashboard-button blue"
+            >
               Gestionar Usuarios
             </button>
-            <button onClick={() => navigate("/products")} className="dashboard-button green">
+            <button
+              onClick={() => navigate("/products")}
+              className="dashboard-button green"
+            >
               Gestionar Productos
             </button>
-            <button onClick={() => navigate("/orders")} className="dashboard-button yellow">
+            <button
+              onClick={() => navigate("/orders")}
+              className="dashboard-button yellow"
+            >
               Gestionar Pedidos
             </button>
           </div>
         ) : (
           <div className="employee-section">
             <h2>Bienvenido Jefe</h2>
-            
             <div className="button-group">
-              <button onClick={() => navigate("/products")} className="dashboard-button green">
+              <button
+                onClick={() => navigate("/products")}
+                className="dashboard-button green"
+              >
                 Ver Productos
               </button>
-              <button onClick={() => navigate("/orders")} className="dashboard-button yellow">
+              <button
+                onClick={() => navigate("/orders")}
+                className="dashboard-button yellow"
+              >
                 Ver Pedidos
               </button>
             </div>
