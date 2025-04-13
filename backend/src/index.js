@@ -5,6 +5,7 @@ const cors = require("cors");
 const authRoutes = require("./routes/authRoutes");
 const productosRouter = require("./routes/productos");
 const userRoutes = require("./routes/userRoutes");
+const ordersRouter = require("./routes/orders");
 
 const app = express();
 
@@ -20,6 +21,9 @@ console.log("✅ Ruta '/api/productos' registrada en Express");
 
 app.use("/api/usuarios", userRoutes);
 console.log("✅ Ruta '/api/usuarios' registrada en Express");
+
+app.use("/api/orders", ordersRouter);
+console.log("✅ Ruta '/api/orders' registrada en Express");
 
 const PORT = 5000;
 
