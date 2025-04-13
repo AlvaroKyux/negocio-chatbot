@@ -1,9 +1,10 @@
 {
   "name": "chatbot",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "telegram.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node telegram.js",
+    "dev": "nodemon telegram.js"
   },
   "keywords": [],
   "author": "",
