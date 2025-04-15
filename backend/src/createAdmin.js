@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
-const User = require("./models/User"); // 👈 Importa el modelo User
+const User = require("./models/User"); 
 
-// Conectar a MongoDB
+
 mongoose.connect("mongodb+srv://Alva:Alvaro12345@negocio-chatbot-cluster.fgi4l.mongodb.net/negocio-chatbot", { 
     useNewUrlParser: true, 
     useUnifiedTopology: true 
@@ -10,7 +10,7 @@ mongoose.connect("mongodb+srv://Alva:Alvaro12345@negocio-chatbot-cluster.fgi4l.m
 .then(async () => {
     console.log("✅ Conectado a MongoDB");
 
-    // Hashear la contraseña
+    
     const hashedPassword = await bcrypt.hash("admin123", 10);
 
     const admin = new User({
@@ -24,7 +24,7 @@ mongoose.connect("mongodb+srv://Alva:Alvaro12345@negocio-chatbot-cluster.fgi4l.m
         estadoCivil: "Soltero",
         direccion: "Calle Falsa 123",
         email: "admin@negocio.com",
-        password: hashedPassword, // 👈 Aquí se almacena la versión hasheada
+        password: hashedPassword, 
         sueldo: 15000,
         gradoEstudios: "Universitario",
         role: "admin",

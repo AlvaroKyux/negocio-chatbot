@@ -79,7 +79,7 @@ bot.on("message", async (msg) => {
   }
 
   if (texto.startsWith("pedir")) {
-    // Buscar coincidencia con comillas: pedir "Airpods Pro 2" 1
+    
     const regex = /pedir\s+"(.+?)"\s+(\d+)/;
     const match = texto.match(regex);
 
@@ -90,7 +90,7 @@ bot.on("message", async (msg) => {
       );
     }
 
-    const nombreProducto = match[1]; // contenido entre comillas
+    const nombreProducto = match[1]; 
     const cantidad = parseInt(match[2]);
 
     if (isNaN(cantidad) || cantidad <= 0) {

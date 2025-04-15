@@ -1,4 +1,4 @@
-// src/controllers/userController.js
+
 const User = require("../models/User");
 
 exports.obtenerUsuarios = async (req, res) => {

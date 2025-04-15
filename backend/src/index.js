@@ -27,7 +27,7 @@ console.log("✅ Ruta '/api/orders' registrada en Express");
 
 const PORT = 5000;
 
-// Conectar a MongoDB asegurando que se usa la base de datos correcta
+
 const MONGO_URI =
   "mongodb+srv://Alva:Alvaro12345@negocio-chatbot-cluster.fgi4l.mongodb.net/negocio-chatbot?retryWrites=true&w=majority&appName=negocio-chatbot-cluster";
 
@@ -41,10 +41,10 @@ mongoose
   })
   .catch((error) => {
     console.error("❌ Error conectando a MongoDB:", error);
-    process.exit(1); // Cerrar la app si falla la conexión
+    process.exit(1); 
   });
 
-// Middleware para capturar rutas incorrectas
+
 app.use((req, res) => {
   console.log(`❌ Ruta no encontrada: ${req.method} ${req.originalUrl}`);
   res.status(404).json({ message: "Ruta no encontrada" });

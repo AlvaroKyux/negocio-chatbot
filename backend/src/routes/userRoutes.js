@@ -6,7 +6,7 @@ const {
 const User = require("../models/User");
 const router = express.Router();
 
-//Obtener todos los usuarios (solo admin)
+
 router.get("/", protegerRuta, verificarAdmin, async (req, res) => {
   try {
     const users = await User.find();

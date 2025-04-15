@@ -1,4 +1,4 @@
-// src/api/userService.js
+
 import axios from "./axios";
 
 export const obtenerUsuarios = () => axios.get("/usuarios");

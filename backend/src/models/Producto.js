@@ -5,7 +5,7 @@ const productoSchema = new mongoose.Schema({
   cantidad: { type: Number, required: true },
   precio: { type: Number, required: true },
   modelo: { type: String, required: true },
-  // Agrega otros campos según sea necesario
+  
 });
 
 module.exports = mongoose.model("Producto", productoSchema);

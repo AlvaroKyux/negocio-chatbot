@@ -22,7 +22,7 @@ const ProductosPage = () => {
     if (confirmar) {
       try {
         await eliminarProducto(id);
-        cargarProductos(); // Recargar productos después de eliminar
+        cargarProductos(); 
       } catch (error) {
         console.error("Error al eliminar producto:", error);
       }

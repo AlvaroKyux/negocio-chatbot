@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaUser, FaLock } from "react-icons/fa"; // Íconos para mejorar el diseño
+import { FaUser, FaLock } from "react-icons/fa";
 import "./Login.css";
 
 const Login = () => {
@@ -12,13 +12,13 @@ const Login = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
-      navigate("/dashboard"); // O "/products" según el rol guardado
+      navigate("/dashboard");
     }
   }, [navigate]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError(""); // Limpiar errores previos
+    setError(""); 
     console.log("🔍 Iniciando sesión con:", { email, password });
 
     try {
@@ -39,9 +39,9 @@ const Login = () => {
       }
 
       console.log("✅ Inicio de sesión exitoso. Token recibido:", data.token);
-      // Guardar el token en localStorage
+      
       localStorage.setItem("token", data.token);
-      localStorage.setItem("role", data.role); // 👈 IMPORTANTE
+      localStorage.setItem("role", data.role); 
 
       // Redirigir según el rol
       if (data.role === "admin") {

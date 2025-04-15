@@ -1,4 +1,4 @@
-/* Fondo azul moderno con efecto gradiente */
+/* Fondo azul */
 .dashboard-container {
   min-height: 100vh;
   display: flex;
@@ -9,7 +9,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Tarjeta central blanca con sombra */
+/* Tarjeta central blanca */
 .dashboard-card {
   background: #ffffff;
   padding: 40px 30px;

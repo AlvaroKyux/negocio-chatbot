@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
-// Esquema de usuario
 const userSchema = new mongoose.Schema({
     nombre: String,
     apellidoPaterno: String,
@@ -12,7 +11,7 @@ const userSchema = new mongoose.Schema({
     nss: String,
     estadoCivil: String,
     direccion: String,
-    email: { type: String, required: true, unique: true, trim: true }, // 👈 trim para evitar espacios
+    email: { type: String, required: true, unique: true, trim: true }, 
     password: { type: String, required: true },
     sueldo: Number,
     gradoEstudios: String,
@@ -28,5 +27,5 @@ const userSchema = new mongoose.Schema({
 //    next();
 //});
 
-// Exportar modelo con el nombre correcto de colección
-module.exports = mongoose.model("User", userSchema); // 👈 El nombre del modelo debe coincidir con la colección
+
+module.exports = mongoose.model("User", userSchema); 
